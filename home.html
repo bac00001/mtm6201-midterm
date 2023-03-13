@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- CSS Reset  -->
+    <link rel="stylesheet" href="css/reset.css">
+
+    <!-- Icon Stylesheet -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+    <!-- Custom Stylesheet  -->
+    <link rel="stylesheet" href="css/main.css">
+    <title>Queen of Pastries - Home</title>
+</head>
+
+<body>
+    <!-- Use header, main, section, footer, etc. instead of div tag for accessibility purposes. -->
+    <header>
+        <img class="logo" src="images/logo.png" alt="Queen of Pastries Shop">
+        <nav class="nav" role="navigation">
+            <ul>
+                <!-- Link all nav items to respective pages -->
+                <li><a href="home.html">Home</a></li>
+                <li><a href="about.html">About Us</a></li>
+                <li><a href="contact.html">Contact Us</a></li>
+            </ul>
+        </nav>
+        <div class="banner" role="banner">
+            <img class="banner-img" src="images/cupcake-banner.jpg" alt="Our special blueberry cupcakes garnished with fresh blueberries, strawberries, and mint.">
+            <!-- Adds slider dots to show that the image is a path of a slideshow (Bootstrap and Javascrip are not allowed in this assignment) -->
+            <img class="slider-dots" src="images/slider-dots.png" alt="">
+            <!-- Leave an empty alt tag for decorative images, so the assistive technologies don't read out the file name. -->
+        </div>
+    </header>
+    <main role="main">
+        <section class="menu">
+            <h1>Our Menu</h1>
+            <!-- Add a hr tag to be styled in CSS, as a divider between section header and tab headers. -->
+            <hr>
+            <div class="tab-headers">
+                <!-- Use p tag for all text aside from section headers, so we can style them all more efficiently because the design use the same font for them all. -->
+                <p class="menu-label white">Pastries</p>
+                <p class="menu-label purple">Drinks</p>
+            </div>
+            
+            <!-- Wrap all menu item boxed in one wrapper to be styled in CSS using grid -->
+            <div class="menu-wrapper">
+                <div class="menu-item one">
+                    <img src="images/menu-item-one.jpg" alt="Our classic New York Cheesecake with crusty shell, garnished with frozen berries.">
+                    <p class="item-name">New York Cheesecake</p>
+                    <!-- Use HTML code for the dollar sign instead of $ to ensure proper display on all brownsers. -->
+                    <p class="item-price">&#36;5.95</p>
+                    <button type="button">View</button>
+                </div>
+
+                <div class="menu-item two">
+                    <img src="images/menu-item-two.jpg" alt="Our fresh, sweet, and fluffy Strawberry Cream Cake Roll.">
+                    <p class="item-name">Strawberry Cream Cake</p>
+                    <p class="item-price">&#36;5.95</p>
+                    <button type="button">View</button>
+                </div>
+
+                <div class="menu-item three">
+                    <img src="images/menu-item-three.png" alt="Our all-time-favourite Apple Cheesecake with graham crust.">
+                    <p class="item-name">Apple Cheesecake</p>
+                    <p class="item-price">&#36;4.95</p>
+                    <button type="button">View</button>
+                </div>
+
+                <div class="menu-item four">
+                    <img src="images/menu-item-four.jpg" alt="Our mouthwatering Pistachio-Strawberry Tarlet topped with soft meringue.">
+                    <p class="item-name">Pistachio-Strawberry Tartlet</p>
+                    <p class="item-price">&#36;5.25</p>
+                    <button type="button">View</button>
+                </div>
+
+                <div class="menu-item five">
+                    <img src="images/menu-item-five.jpg" alt="Our delicious Oreo Cheesecake with moist banana biscuit, garnished with whipped cream and the well-loved Oreo Original.">
+                    <p class="item-name">Oreo Cheesecake</p>
+                    <p class="item-price">&#36;7.25</p>
+                    <button type="button">View</button>
+                </div>
+
+                <div class="menu-item six">
+                    <img src="images/menu-item-six.jpg" alt="Our special Coffee Cake topped with mixed, sugar glazed nuts.">
+                    <p class="item-name">Coffee Cake</p>
+                    <p class="item-price">&#36;7.25</p>
+                    <button type="button">View</button>
+                </div>
+            </div>
+
+            <button class="main-menu-button" type="button">View All</button>
+        </section>
+
+        <section class="art-of-coffee">
+            <h1>Art of Coffee</h1>
+            <hr>
+            
+            <div class="latte-art-img-wrapper">
+                <span class="arrow left">&#9666;</span>
+                <img src="images/art-of-coffee-one.jpg" alt="">
+                <img src="images/art-of-coffee-two.png" alt="Our foamy latte with beautiful latte art: smells good, looks good, tastes good. Marvelous!">
+                <img src="images/art-of-coffee-three.jpg" alt="">
+                <span class="arrow right">&#9656;</span>
+            </div>
+
+            <div class="lorem">
+                <p>Lorem ipsum dolor sit amet, consectetur 
+                    adipiscing elit. Ut sit amet ipsum non 
+                    ipsum accumsan viverra. Suspendisse a 
+                    accumsan nulla. Nunc nunc nibh, ullam 
+                    corper nec nisl eu, auctor fringilla lectus. 
+                    
+                    Sed luctus libero et justo ultrices ornare. Ut 
+                    auctor enim sit amet eros porta porta. Viva 
+                    mus consequat nisi nec magna sollicitudin 
+                    blandit.Vivamus vel mauris dui. Phasellus 
+                    condimentum vulputate magna id tincidu. 
+                    Quisque non orci iaculis.</p>
+            </div>
+        </section>
+
+        <section class="coffee-beans">
+            <h1>Our Coffee Beans</h1>
+            <hr>
+
+            <div class="coffee-beans-card">
+                <span class="arrow left">&#9666;</span>
+
+                <div class="menu-item beans one">
+                    <img src="images/coffee-package.jpg" alt="Our specialty light-roasted coffee beans.">
+                    <p class="item-name">Light-roasted Coffee Beans</p>
+                    <p class="item-price">&#36;11.25</p>
+                    <button type="button">View</button>
+                </div>
+
+                <div class="menu-item beans two">
+                    <img src="images/coffee-package.jpg" alt="Our specialty medium-roasted coffee beans.">
+                    <p class="item-name">Medium-roasted Coffee Beans</p>
+                    <p class="item-price">&#36;11.25</p>
+                    <button type="button">View</button>
+                </div>
+
+                <div class="menu-item beans three">
+                    <img src="images/coffee-package.jpg" alt="Our specialty roasted coffee beans.">
+                    <p class="item-name">Roasted Coffee Beans</p>
+                    <p class="item-price">&#36;11.25</p>
+                    <button type="button">View</button>
+                </div>
+
+                <span class="arrow right">&#9656;</span>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+
+        <!-- Use a div to wrap the footer menu, so we can style it using flexbox in CSS. -->
+        <div class="footer-menu">
+            <div class="footer-first-section">
+                <ul>
+                    <li class="footer-menu-header">About Us</li>
+                    <li>Our Story</li>
+                    <li>Our Mission</li>
+                    <li>Our Vision</li>
+                </ul>
+            </div>
+
+            <div class="footer-second-section">
+                <ul>
+                    <li class="footer-menu-header">Contact</li>
+                    <li>Contact Us</li>
+                    <li>Our Locations</li>
+                    <li>Delivery</li>
+                </ul>
+            </div>
+
+            <div class="ig-icon">
+                <a href="https://www.instagram.com/" target="_blank"><i class="fa fa-instagram"></i></a>
+            </div>
+
+            <div class="fb-icon">
+                <a href="https://www.facebook.com/" target="_blank"><i class="fa fa-facebook-square"></i></a>
+            </div>
+        </div>
+
+        <p class="copyright" role="contentinfo">
+            <i class="fa fa-copyright"></i>
+            Queen of Pastries 2022
+        </p>
+
+    </footer>
+    
+</body>
+</html>

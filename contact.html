@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- CSS Reset  -->
+    <link rel="stylesheet" href="css/reset.css">
+
+    <!-- Icon Stylesheet -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+    <!-- Custom Stylesheet  -->
+    <link rel="stylesheet" href="css/main.css">
+    <title>Queen of Pastries - Contact</title>
+</head>
+
+<body>
+    <!-- Use header, main, section, footer, etc. instead of div tag for accessibility purposes. -->
+    <header>
+        <img class="logo" src="images/logo.png" alt="Queen of Pastries Shop">
+        <nav class="nav" role="navigation">
+            <ul>
+                <!-- Link all nav items to respective pages -->
+                <li><a href="home.html">Home</a></li>
+                <li><a href="about.html">About Us</a></li>
+                <li><a href="contact.html">Contact Us</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main role="main">
+        <section class="contact">
+            <h1>Contact Us</h1>
+            <!-- Add a hr tag to be styled in CSS, as a divider between section header and tab headers. -->
+            <hr>
+
+            <!-- Wrap the contact info in a div tag to be styled using flexbox in CSS -->
+            <div class="contact-flex-wrapper contact-info" itemscope itemtype="https://schema.org/Organization">
+            <!-- Using Schema for accessibility purposes. -->
+
+                <div class="phone">
+                    <!-- Use span tag to wrap the icons, so we can style them and add margin in CSS -->
+                    <span class="contact-icon"><i class="fa fa-phone"></i></span>
+                    <p class="contact-text" itemprop="telephone">123-456-7890</p>
+                </div>
+
+                <div class="email">
+                    <span class="contact-icon"><i class="fa fa-envelope"></i></span>
+                    <p class="contact-text" itemprop="email">queenofpastries@gmail.com</p>
+                </div>
+
+                <div class="insta">
+                    <span class="contact-icon"><i class="fa fa-instagram"></i></span>
+                    <p class="contact-text link"><a href="https://www.instagram.com/" target="_blank">@queen_of_pastries</a></p>
+                </div>
+
+                <div class="facebook">
+                    <span class="contact-icon"><i class="fa fa-facebook-square"></i></span>
+                    <p class="contact-text link"><a href="https://www.instagram.com/" target="_blank">Queen of Pastries</a></p>
+                </div>
+            </div>
+        </section>
+
+        <section class="locations">
+            <h1>Locations</h1>
+            <hr>
+
+            <!-- Wrap the location info in a div tag to be styled using flexbox in CSS -->
+            <div class="contact-flex-wrapper location-info">
+                <div>
+                    <p itemprop="address" itemscope itemtype="https://schema.org/PostalAddress">
+                        <span itemprop="streetAddress">123 Bank St. </span>
+                        <span itemprop="addressLocality">Ottawa ON </span>
+                        <span itemprop="addressCountry">CAN </span>
+                        <span itemprop="postalCode">B3T 0L0</span>
+                      </p>
+                </div>
+
+                <div>
+                    <p itemprop="address" itemscope itemtype="https://schema.org/PostalAddress">
+                        <span itemprop="streetAddress">123 Laurier Ave E. </span>
+                        <span itemprop="addressLocality">Ottawa ON </span>
+                        <span itemprop="addressCountry">CAN </span>
+                        <span itemprop="postalCode">D3T 0L0</span>
+                      </p>
+                </div>
+            </div>
+        </section>
+
+        <section class="delivery">
+            <h1>Delivery</h1>
+            <hr>
+
+            <!-- Wrap the delivery info in a div tag to be styled using flexbox in CSS -->
+            <div class="contact-flex-wrapper delivery-info">
+                
+                <div class="delivery-text link">
+                    <p><a href="https://www.ubereats.com/ca" target="_blank">Uber Eats</a></p>
+                </div>
+
+                <div class="delivery-text link">
+                    <p><a href="https://www.doordash.com/" target="_blank">Doordash</a></p>
+                </div>
+
+                <div class="delivery-text link">
+                    <p><a href="https://www.skipthedishes.com/" target="_blank">Skip The Dishes</a></p>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+
+        <!-- Use a div to wrap the footer menu, so we can style it using flexbox in CSS. -->
+        <div class="footer-menu">
+            <div class="footer-first-section">
+                <ul>
+                    <li class="footer-menu-header">Home</li>
+                    <li>Menu</li>
+                    <li>Art of Coffee</li>
+                    <li>Our Coffee Beans</li>
+                </ul>
+            </div>
+
+            <div class="footer-second-section">
+                <ul>
+                    <li class="footer-menu-header">About Us</li>
+                    <li>Our Story</li>
+                    <li>Our Mission</li>
+                    <li>Our Vision</li>
+                </ul>
+            </div>
+
+            <div class="ig-icon">
+                <a href="https://www.instagram.com/" target="_blank"><i class="fa fa-instagram"></i></a>
+            </div>
+
+            <div class="fb-icon">
+                <a href="https://www.facebook.com/" target="_blank"><i class="fa fa-facebook-square"></i></a>
+            </div>
+        </div>
+
+        <p class="copyright" role="contentinfo">
+            <i class="fa fa-copyright"></i>
+            Queen of Pastries 2022
+        </p>
+
+    </footer>
+    
+</body>
+</html>
