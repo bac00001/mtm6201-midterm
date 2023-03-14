@@ -1,4 +1,60 @@
+/****************************
+     Mobile first design 
+*****************************/
 
+.body {
+    font-family: 'Source Sans Pro', sans-serif;
+}
+
+h1 {
+    font-family: 'El Messiri', sans-serif;
+    font-size: 30px;
+    color: #4D2C6D;
+    text-align: center;
+    margin: 60px auto 5px auto;
+}
+
+/* The divider line below all h1 */
+.line {
+    display: block;
+    width: 280px;
+    height: 1.5px;
+    background-color: #5F2B22;
+    margin: 0 auto 10px auto;
+}
+
+p {
+    font-family: 'Source Sans Pro', sans-serif;
+    font-size: 20px;
+    line-height: 160%;
+}
+
+/* ----------Header------------- */
+
+/* Set the background color for the logo and nav wrapper */
+.logo-nav {
+    background-color: #C9ACA7;
+    width: 100%;
+    display: flex;
+}
+
+.logo-wrapper {
+    display: none;
+}
+
+.logo-mobile {
+    width: 60%;
+    /* Center the logo horizontally and vertically in the header */
+    margin: 20px 0 20px 25.56%;
+}
+
+.logo-wrapper-mobile {
+    flex-basis: 90%;
+}
+
+.nav {
+    flex-basis: 10%;
+}
 
 .banner {
     position: relative;
@@ -6,11 +62,108 @@
     left: 0;
 }
 
+
+/* ----------Hamburger Menu---------------- */
+.nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px;
+}
+
+label {
+    display: inline-block;
+    cursor: pointer;
+    padding: 10px;
+}
+
+label span {
+    display: block;
+    width: 30px;
+    height: 3px;
+    margin-bottom: 6px;
+    background-color: #4D2C6D;
+    transition: transform 0.2s ease-out;
+}
+
+input[type="checkbox"] {
+    display: none;
+}
+
+input[type="checkbox"]:checked~.nav-ul {
+    display: block;
+}
+
+input[type="checkbox"]:checked~label span:nth-of-type(1) {
+    transform: rotate(45deg) translate(5px, 5px);
+}
+
+input[type="checkbox"]:checked~label span:nth-of-type(2) {
+    opacity: 0;
+}
+
+input[type="checkbox"]:checked~label span:nth-of-type(3) {
+    transform: rotate(-45deg) translate(6.5px, -8.5px);
+}
+
+.nav-ul {
+    display: none;
+    position: absolute;
+
+    top: 200px;
+    /* As Javascript is not allowed in this assignment, the dynamic height of the logo-nav wrapper as well as the dynamic value of the 'top' cannot be calculated. Therefore, the nav menu displayed when the hamburger menu is clicked cannot stick to the bottom of the header properly. */
+
+    left: 0;
+    width: 100%;
+    padding: 50px 0 40px 0;
+    background-color: #fff;
+    /* padding: 0; */
+    margin: 0;
+    list-style: none;
+    text-align: center;
+    z-index: 1;
+}
+
+.nav-ul .nav-li {
+    margin-bottom: 10px;
+}
+
+.nav-ul .nav-li a {
+    display: block;
+    font-family: 'El Messiri', sans-serif;
+    font-size: 22px;
+    padding: 10px;
+    color: #4D2C6D;
+    text-decoration: none;
+}
+
+/* ----------Skip Links------------- */
+.skip-links-section {
+    display: grid;
+    grid-template-columns: auto auto auto;
+    text-align: center;
+    padding: 15px 0;
+    background-color: #C9ACA7;
+}
+
+.skip-links-section .skip-link .link a {
+    text-decoration: none;
+    color: #5F2B22;
+    font-weight: bold;
+}
+
+
+/* -------------------------------------- 
+             ---- HOME PAGE ----
+   -------------------------------------- */
+
+/* ----------Home Header------------- */
 .banner-img {
     width: 100%;
     position: relative;
     top: 0;
     left: 0;
+    z-index: 0
 }
 
 .slider-dots {
@@ -20,6 +173,274 @@
     left: 45%;
 }
 
+
 .menu-item img {
     width: 100%;
+}
+
+/* ----------Our Menu Section------------- */
+.tab-headers {
+    display: flex;
+    width: 100%;
+}
+
+.menu-label {
+    flex-basis: 50%;
+    margin-bottom: 30px;
+}
+
+.menu-label .white {
+    width: 100px;
+    margin-left: auto;
+    margin-right: 0;
+    text-align: center;
+    padding: 2px 0 2px 0;
+    background-color: #4D2C6D;
+    color: #fff;
+}
+
+.menu-label .purple {
+    padding-left: 10px;
+    color: #4D2C6D;
+}
+
+/* Menu Grid */
+
+.menu-wrapper {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 5% 5%;
+    padding: 0 8% 100px 8%;
+}
+
+.menu-wrapper .menu-item .name-price-wrapper {
+    display: grid;
+    grid-template-columns: 75% 25%;
+    padding: 3px 0 3px 0;
+}
+
+.menu-wrapper .menu-item .name-price-wrapper .item-price {
+    text-align: right;
+}
+
+.menu-wrapper .menu-item .name-price-wrapper div {
+    height: auto;
+}
+
+.menu-text {
+    font-size: 15px;
+}
+
+/* Menu 'View' buttons */
+.menu-item button {
+    width: 100%;
+    background-color: #4D2C6D;
+    color: #fff;
+}
+
+
+/* Menu 'View All' button */
+
+
+.menu .main-menu-button-wrapper .main-menu-button {
+    display: block;
+    margin: 0 auto;
+    background-color: #4D2C6D;
+    color: #fff;
+    padding: 5px 30px 5px 30px;
+}
+
+/* ----------Art of Coffee Section------------- */
+.latte-art-img-wrapper img {
+    width: 100%;
+}
+
+.art-of-coffee .latte-art-img-wrapper .img-one,
+.art-of-coffee .latte-art-img-wrapper .img-three {
+    display: none;
+}
+
+.latte-art-img-wrapper {
+    margin-top: 30px;
+    display: grid;
+    grid-template-columns: 16% 68% 16%;
+    align-items: center;
+}
+
+.latte-art-img-wrapper .arrow {
+    text-align: center;
+    font-size: 60px;
+    color: #4D2C6D;
+}
+
+.lorem {
+    padding: 5% 7% 0 7%;
+    text-align: center;
+}
+
+/* ----------Our Coffee Beans Section------------- */
+.coffee-beans .coffee-beans-card .beans-one,
+.coffee-beans .coffee-beans-card .beans-three {
+    display: none;
+}
+
+.coffee-beans-card {
+    display: grid;
+    grid-template-columns: 12% 76% 12%;
+    align-items: center;
+}
+
+.coffee-beans-card .arrow {
+    text-align: center;
+    font-size: 60px;
+    color: #4D2C6D;
+}
+
+/* The product card in Coffee Beans Section */
+.coffee-beans .coffee-beans-card .beans-two {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 5% 5%;
+    padding: 30px 8% 100px 8%;
+}
+
+.coffee-beans-card .menu-item .name-price-wrapper {
+    display: grid;
+    grid-template-columns: 75% 25%;
+    padding: 3px 0 3px 0;
+}
+
+.coffee-beans-card .menu-item .name-price-wrapper .item-price {
+    text-align: right;
+}
+
+.mcoffee-beans-card .menu-item .name-price-wrapper div {
+    height: auto;
+}
+
+.menu-text {
+    font-size: 15px;
+}
+
+/* Coffee Beans 'View' buttons */
+.menu-item button {
+    width: 100%;
+    background-color: #4D2C6D;
+    color: #fff;
+}
+
+
+/* ----------Footer Section------------- */
+footer {
+    background-color: #C9ACA7;
+    padding-bottom: 15px;
+}
+
+.footer-menu {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    font-family: 'Source Sans Pro', sans-serif;
+    color: #fff;
+}
+
+.footer-menu .footer-first-section {
+    padding: 5px 0 15px 0;
+    margin-left: 35%;
+}
+
+.footer-menu .footer-second-section {
+    width: fit-content;
+    margin-right: 35%;
+    margin-left: auto;
+    padding: 5px 0 15px 0;
+}
+
+.footer-menu .footer-menu-header {
+    font-size: 20px;
+    margin-bottom: 20px;
+}
+
+.footer-menu .footer-menu-header a {
+    text-decoration: none;
+    color: #fff;
+}
+
+.footer-menu li {
+    margin-top: 10px;
+}
+
+/* Social Media Icons */
+.footer-menu .ig-icon {
+    font-size: 35px;
+    margin-left: 70%;
+}
+
+.footer-menu .fb-icon {
+    font-size: 35px;
+    width: fit-content;
+    margin-right: 70%;
+    margin-left: auto;
+}
+
+/* Copyright Section */
+.copyright {
+    font-size: 14px;
+    text-align: center;
+    margin-top: 15px;
+    color: #fff;
+}
+
+.copyright .fa-copyright {
+    color: #4D2C6D;
+    font-weight: 600;
+}
+
+
+/* -------------------------------------- 
+             ---- CONTACT PAGE ----
+   -------------------------------------- */
+.contact .contact-wrapper div {
+    display: grid;
+    grid-template-columns: 20%, 80%;
+}
+
+
+/****************************
+        Mid Size Design 
+*****************************/
+@media screen and (min-width: 470px) {
+    .menu-wrapper {
+        padding-bottom: 150px;
+    }
+
+    /* span width
+.line 400px 
+
+p 22px*/
+
+
+
+
+
+
+
+
+
+}
+
+
+
+
+/****************************
+      Large Size Design 
+*****************************/
+@media screen and (min-width: 800px) {
+    .menu-wrapper {
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+
+
+
+
 }

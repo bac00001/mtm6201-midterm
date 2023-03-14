@@ -9,6 +9,13 @@
     <!-- CSS Reset  -->
     <link rel="stylesheet" href="css/reset.css">
 
+    <!-- Google Fonts Links -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=El+Messiri&family=Source+Sans+Pro&display=swap"
+        rel="stylesheet">
+
     <!-- Icon Stylesheet -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
@@ -20,26 +27,54 @@
 <body>
     <!-- Use header, main, section, footer, etc. instead of div tag for accessibility purposes. -->
     <header>
-        <img class="logo" src="images/logo.png" alt="Queen of Pastries Shop">
-        <nav class="nav" role="navigation">
-            <ul>
-                <!-- Link all nav items to respective pages -->
-                <li><a href="home.html">Home</a></li>
-                <li><a href="about.html">About Us</a></li>
-                <li><a href="contact.html">Contact Us</a></li>
-            </ul>
-        </nav>
+        <div class="logo-nav">
+            <!-- Two logos: one for mobile devices, one for large size screen. One will be hidden using CSS -->
+            <div class="logo-wrapper-mobile">
+                <img class="logo-mobile" src="images/logo-mobile.png" alt="Queen of Pastries Shop">
+            </div>
+            <div class="logo-wrapper">
+                <img class="logo" src="images/logo.png" alt="Queen of Pastries Shop">
+            </div>
+
+
+            <!-- ----------------------- -->
+            <!-- Create a hamburger menu for mobile devices. 
+             The menu icon is created using three <span> elements within a <label> element. When the user clicks on the label, the checkbox is toggled and the <ul> element containing the menu items is displayed or hidden using the :checked pseudo-class.-->
+            <nav class="nav" role="navigation">
+                <input class="hamburger" type="checkbox" id="menu-toggle">
+                <label class="hamburger" for="menu-toggle">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </label>
+                <ul class="nav-ul">
+                    <!-- Link all nav items to respective pages -->
+                    <li class="nav-li"><a href="home.html">Home</a></li>
+                    <li class="nav-li"><a href="about.html">About Us</a></li>
+                    <li class="nav-li"><a href="contact.html">Contact Us</a></li>
+                </ul>
+            </nav>
+
+            
+        </div>
         <div class="banner" role="banner">
             <img class="banner-img" src="images/img-about.jpg"
                 alt="Our friendly employee providing friendly customer service.">
         </div>
+
+        <!-- Add skiplinks -->
+        <div class="skip-links-section">
+            <div class="skip-link"><p class="link"><a href="#story">Our Story</a></p></div>
+            <div class="skip-link"><p class="link"><a href="#mission">Our Mission</a></p></div>
+            <div class="skip-link"><p class="link"><a href="#vision">Our Vision</a></p></div>
+        </div>
     </header>
 
     <main role="main">
-        <section class="our-story">
+        <section class="our-story" id="story">
             <h1>Our Story</h1>
-            <!-- Add a hr tag to be styled in CSS, as a divider between section header and tab headers. -->
-            <hr>
+            <!-- Add a span tag to be styled in CSS, as a divider between section header and tab headers. -->
+            <span class="line"></span>
 
             <!-- Wrap the p tag in a div tag to add padding in CSS. -->
             <div class="lorem">
@@ -73,9 +108,9 @@
             </div>
         </section>
 
-        <section class="our-mission">
+        <section class="our-mission" id="mission">
             <h1>Our Mission</h1>
-            <hr>
+            <span class="line"></span>
 
             <div class="lorem">
                 <p>
@@ -95,9 +130,9 @@
             </div>
         </section>
 
-        <section class="our-vision">
+        <section class="our-vision" id="vision">
             <h1>Our Vision</h1>
-            <hr>
+            <span class="line"></span>
 
             <div class="lorem">
                 <p>
@@ -124,7 +159,7 @@
         <div class="footer-menu">
             <div class="footer-first-section">
                 <ul>
-                    <li class="footer-menu-header">Home</li>
+                    <li class="footer-menu-header"><a href="home.html">Home</a></li>
                     <li>Menu</li>
                     <li>Art of Coffee</li>
                     <li>Our Coffee Beans</li>
@@ -133,7 +168,7 @@
 
             <div class="footer-second-section">
                 <ul>
-                    <li class="footer-menu-header">Contact</li>
+                    <li class="footer-menu-header"><a href="contact.html">Contact</a></li>
                     <li>Contact Us</li>
                     <li>Our Locations</li>
                     <li>Delivery</li>

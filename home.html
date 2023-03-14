@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -7,6 +8,13 @@
 
     <!-- CSS Reset  -->
     <link rel="stylesheet" href="css/reset.css">
+
+    <!-- Google Fonts Links -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=El+Messiri&family=Source+Sans+Pro&display=swap"
+        rel="stylesheet">
 
     <!-- Icon Stylesheet -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
@@ -19,136 +27,199 @@
 <body>
     <!-- Use header, main, section, footer, etc. instead of div tag for accessibility purposes. -->
     <header>
-        <img class="logo" src="images/logo.png" alt="Queen of Pastries Shop">
-        <nav class="nav" role="navigation">
-            <ul>
-                <!-- Link all nav items to respective pages -->
-                <li><a href="home.html">Home</a></li>
-                <li><a href="about.html">About Us</a></li>
-                <li><a href="contact.html">Contact Us</a></li>
-            </ul>
-        </nav>
+
+        <div class="logo-nav">
+
+            <!-- Two logos: one for mobile devices, one for large size screen. One will be hidden using CSS -->
+            <div class="logo-wrapper-mobile">
+                <img class="logo-mobile" src="images/logo-mobile.png" alt="Queen of Pastries Shop">
+            </div>
+            <div class="logo-wrapper">
+                <img class="logo" src="images/logo.png" alt="Queen of Pastries Shop">
+            </div>
+
+            <!-- ----------------------- -->
+            <!-- Create a hamburger menu for mobile devices. 
+             The menu icon is created using three <span> elements within a <label> element. When the user clicks on the label, the checkbox is toggled and the <ul> element containing the menu items is displayed or hidden using the :checked pseudo-class.-->
+            <nav class="nav" role="navigation">
+                <input class="hamburger" type="checkbox" id="menu-toggle">
+                <label class="hamburger" for="menu-toggle">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </label>
+                <ul class="nav-ul">
+                    <!-- Link all nav items to respective pages -->
+                    <li class="nav-li"><a href="home.html">Home</a></li>
+                    <li class="nav-li"><a href="about.html">About Us</a></li>
+                    <li class="nav-li"><a href="contact.html">Contact Us</a></li>
+                </ul>
+            </nav>
+
+        </div>
         <div class="banner" role="banner">
-            <img class="banner-img" src="images/cupcake-banner.jpg" alt="Our special blueberry cupcakes garnished with fresh blueberries, strawberries, and mint.">
+            <img class="banner-img" src="images/cupcake-banner.jpg"
+                alt="Our special blueberry cupcakes garnished with fresh blueberries, strawberries, and mint.">
             <!-- Adds slider dots to show that the image is a path of a slideshow (Bootstrap and Javascrip are not allowed in this assignment) -->
             <img class="slider-dots" src="images/slider-dots.png" alt="">
             <!-- Leave an empty alt tag for decorative images, so the assistive technologies don't read out the file name. -->
         </div>
+
+        <!-- Add skiplinks -->
+        <div class="skip-links-section">
+            <div class="skip-link">
+                <p class="link"><a href="#menu">Menu</a></p>
+            </div>
+            <div class="skip-link">
+                <p class="link"><a href="#art-of-coffee">Art of Coffee</a></p>
+            </div>
+            <div class="skip-link">
+                <p class="link"><a href="#coffee-beans">Coffee Beans</a></p>
+            </div>
+        </div>
     </header>
     <main role="main">
-        <section class="menu">
+        <section class="menu" id="menu">
             <h1>Our Menu</h1>
-            <!-- Add a hr tag to be styled in CSS, as a divider between section header and tab headers. -->
-            <hr>
+            <!-- Add a span tag to be styled in CSS, as a divider between section header and tab headers. -->
+            <span class="line"></span>
             <div class="tab-headers">
                 <!-- Use p tag for all text aside from section headers, so we can style them all more efficiently because the design use the same font for them all. -->
-                <p class="menu-label white">Pastries</p>
-                <p class="menu-label purple">Drinks</p>
+                <div class="menu-label label-one"><p class="white">Pastries</p></div>
+                <div class="menu-label"><p class="purple">Drinks</p></div>
             </div>
-            
+
             <!-- Wrap all menu item boxed in one wrapper to be styled in CSS using grid -->
             <div class="menu-wrapper">
                 <div class="menu-item one">
-                    <img src="images/menu-item-one.jpg" alt="Our classic New York Cheesecake with crusty shell, garnished with frozen berries.">
-                    <p class="item-name">New York Cheesecake</p>
-                    <!-- Use HTML code for the dollar sign instead of $ to ensure proper display on all brownsers. -->
-                    <p class="item-price">&#36;5.95</p>
-                    <button type="button">View</button>
+                    <img src="images/menu-item-one.jpg"
+                        alt="Our classic New York Cheesecake with crusty shell, garnished with frozen berries.">
+                    <div class="name-price-wrapper">
+                        <div class="item-name"><p class="menu-text">New York Cheesecake</p></div>
+                        <!-- Use HTML code for the dollar sign instead of $ to ensure proper display on all brownsers. -->
+                        <div class="item-price"><p class="menu-text">&#36;5.95</p></div>
+                    </div>
+                    <button type="button"><p class="menu-text">View</p></button>
                 </div>
 
                 <div class="menu-item two">
                     <img src="images/menu-item-two.jpg" alt="Our fresh, sweet, and fluffy Strawberry Cream Cake Roll.">
-                    <p class="item-name">Strawberry Cream Cake</p>
-                    <p class="item-price">&#36;5.95</p>
-                    <button type="button">View</button>
+                    <div class="name-price-wrapper">
+                        <div class="item-name"><p class="menu-text">Strawberry Cream Cake</p></div>
+                        <div class="item-price"><p class="menu-text">&#36;5.95</p></div>
+                    </div>
+                    <button type="button"><p class="menu-text">View</p></button>
                 </div>
 
                 <div class="menu-item three">
-                    <img src="images/menu-item-three.png" alt="Our all-time-favourite Apple Cheesecake with graham crust.">
-                    <p class="item-name">Apple Cheesecake</p>
-                    <p class="item-price">&#36;4.95</p>
-                    <button type="button">View</button>
+                    <img src="images/menu-item-three.png"
+                        alt="Our all-time-favourite Apple Cheesecake with graham crust.">
+                    <div class="name-price-wrapper">
+                        <div class="item-name"><p class="menu-text">Apple Cheesecake</p></div>
+                        <div class="item-price"><p class="menu-text">&#36;4.95</p></div>
+                    </div>
+                    <button type="button"><p class="menu-text">View</p></button>
                 </div>
 
                 <div class="menu-item four">
-                    <img src="images/menu-item-four.jpg" alt="Our mouthwatering Pistachio-Strawberry Tarlet topped with soft meringue.">
-                    <p class="item-name">Pistachio-Strawberry Tartlet</p>
-                    <p class="item-price">&#36;5.25</p>
-                    <button type="button">View</button>
+                    <img src="images/menu-item-four.jpg"
+                        alt="Our mouthwatering Pistachio-Strawberry Tarlet topped with soft meringue.">
+                    <div class="name-price-wrapper">
+                        <div class="item-name"><p class="menu-text">Pistachio-Strawberry Tartlet</p></div>
+                        <div class="item-price"><p class="menu-text">&#36;5.25</p></div>
+                    </div>
+                    <button type="button"><p class="menu-text">View</p></button>
                 </div>
 
                 <div class="menu-item five">
-                    <img src="images/menu-item-five.jpg" alt="Our delicious Oreo Cheesecake with moist banana biscuit, garnished with whipped cream and the well-loved Oreo Original.">
-                    <p class="item-name">Oreo Cheesecake</p>
-                    <p class="item-price">&#36;7.25</p>
-                    <button type="button">View</button>
+                    <img src="images/menu-item-five.jpg"
+                        alt="Our delicious Oreo Cheesecake with moist banana biscuit, garnished with whipped cream and the well-loved Oreo Original.">
+                    <div class="name-price-wrapper">
+                        <div class="item-name"><p class="menu-text">Oreo Cheesecake</p></div>
+                        <div class="item-price"><p class="menu-text">&#36;7.25</p></div>
+                    </div>
+                    <button type="button"><p class="menu-text">View</p></button>
                 </div>
 
                 <div class="menu-item six">
-                    <img src="images/menu-item-six.jpg" alt="Our special Coffee Cake topped with mixed, sugar glazed nuts.">
-                    <p class="item-name">Coffee Cake</p>
-                    <p class="item-price">&#36;7.25</p>
-                    <button type="button">View</button>
+                    <img src="images/menu-item-six.jpg"
+                        alt="Our special Coffee Cake topped with mixed, sugar glazed nuts.">
+                    <div class="name-price-wrapper">
+                        <div class="item-name"><p class="menu-text">Coffee Cake</p></div>
+                        <div class="item-price"><p class="menu-text">&#36;7.25</p></div>
+                    </div>
+                    <button type="button"><p class="menu-text">View</p></button>
                 </div>
             </div>
+            
 
-            <button class="main-menu-button" type="button">View All</button>
+            <div class="main-menu-button-wrapper">
+                <button class="main-menu-button" type="button"><p>View All</p></button>
+            </div>
+
         </section>
 
-        <section class="art-of-coffee">
+        <section class="art-of-coffee" id="art-of-coffee">
             <h1>Art of Coffee</h1>
-            <hr>
-            
+            <span class="line"></span>
+
             <div class="latte-art-img-wrapper">
                 <span class="arrow left">&#9666;</span>
-                <img src="images/art-of-coffee-one.jpg" alt="">
-                <img src="images/art-of-coffee-two.png" alt="Our foamy latte with beautiful latte art: smells good, looks good, tastes good. Marvelous!">
-                <img src="images/art-of-coffee-three.jpg" alt="">
+                <div class="latte-art-img img-one"><img src="images/art-of-coffee-one.jpg" alt=""></div>
+                <div class="latte-art-img img-two"><img src="images/art-of-coffee-two.png"
+                    alt="Our foamy latte with beautiful latte art: smells good, looks good, tastes good. Marvelous!"></div>
+                <div class="latte-art-img img-three"><img src="images/art-of-coffee-three.jpg" alt=""></div>
                 <span class="arrow right">&#9656;</span>
             </div>
 
             <div class="lorem">
-                <p>Lorem ipsum dolor sit amet, consectetur 
-                    adipiscing elit. Ut sit amet ipsum non 
-                    ipsum accumsan viverra. Suspendisse a 
-                    accumsan nulla. Nunc nunc nibh, ullam 
-                    corper nec nisl eu, auctor fringilla lectus. 
-                    
-                    Sed luctus libero et justo ultrices ornare. Ut 
-                    auctor enim sit amet eros porta porta. Viva 
-                    mus consequat nisi nec magna sollicitudin 
-                    blandit.Vivamus vel mauris dui. Phasellus 
-                    condimentum vulputate magna id tincidu. 
+                <p>Lorem ipsum dolor sit amet, consectetur
+                    adipiscing elit. Ut sit amet ipsum non
+                    ipsum accumsan viverra. Suspendisse a
+                    accumsan nulla. Nunc nunc nibh, ullam
+                    corper nec nisl eu, auctor fringilla lectus.
+
+                    Sed luctus libero et justo ultrices ornare. Ut
+                    auctor enim sit amet eros porta porta. Viva
+                    mus consequat nisi nec magna sollicitudin
+                    blandit.Vivamus vel mauris dui. Phasellus
+                    condimentum vulputate magna id tincidu.
                     Quisque non orci iaculis.</p>
             </div>
         </section>
 
-        <section class="coffee-beans">
+        <section class="coffee-beans" id="coffee-beans">
             <h1>Our Coffee Beans</h1>
-            <hr>
+            <span class="line"></span>
 
             <div class="coffee-beans-card">
                 <span class="arrow left">&#9666;</span>
 
-                <div class="menu-item beans one">
+                <div class="menu-item beans-one">
                     <img src="images/coffee-package.jpg" alt="Our specialty light-roasted coffee beans.">
-                    <p class="item-name">Light-roasted Coffee Beans</p>
-                    <p class="item-price">&#36;11.25</p>
-                    <button type="button">View</button>
+                    <div class="name-price-wrapper">
+                        <div class="item-name"><p class="menu-text">Light-roasted Coffee Beans</p></div>
+                    <div class="item-price"><p class="menu-text">&#36;11.25</p></div>
+                    </div>
+                    <button type="button"><p class="menu-text">View</p></button>
                 </div>
 
-                <div class="menu-item beans two">
+                <div class="menu-item beans-two">
                     <img src="images/coffee-package.jpg" alt="Our specialty medium-roasted coffee beans.">
-                    <p class="item-name">Medium-roasted Coffee Beans</p>
-                    <p class="item-price">&#36;11.25</p>
-                    <button type="button">View</button>
+                    <div class="name-price-wrapper">
+                        <div class="item-name"><p class="menu-text">Medium-roasted Coffee Beans</p></div>
+                    <div class="item-price"><p class="menu-text">&#36;11.25</p></div>
+                    </div>
+                    <button type="button"><p class="menu-text">View</p></button>
                 </div>
 
-                <div class="menu-item beans three">
+                <div class="menu-item beans-three">
                     <img src="images/coffee-package.jpg" alt="Our specialty roasted coffee beans.">
-                    <p class="item-name">Roasted Coffee Beans</p>
-                    <p class="item-price">&#36;11.25</p>
-                    <button type="button">View</button>
+                    <div class="name-price-wrapper">
+                        <div class="item-name"><p class="menu-text">Roasted Coffee Beans</p></div>
+                    <div class="item-price"><p class="menu-text">&#36;11.25</p></div>
+                    </div>
+                    <button type="button"><p class="menu-text"></p>View</button>
                 </div>
 
                 <span class="arrow right">&#9656;</span>
@@ -162,7 +233,7 @@
         <div class="footer-menu">
             <div class="footer-first-section">
                 <ul>
-                    <li class="footer-menu-header">About Us</li>
+                    <li class="footer-menu-header"><a href="about.html">About Us</a></li>
                     <li>Our Story</li>
                     <li>Our Mission</li>
                     <li>Our Vision</li>
@@ -171,7 +242,7 @@
 
             <div class="footer-second-section">
                 <ul>
-                    <li class="footer-menu-header">Contact</li>
+                    <li class="footer-menu-header"><a href="contact.html">Contact</a></li>
                     <li>Contact Us</li>
                     <li>Our Locations</li>
                     <li>Delivery</li>
@@ -193,6 +264,7 @@
         </p>
 
     </footer>
-    
+
 </body>
+
 </html>

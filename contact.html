@@ -9,6 +9,13 @@
     <!-- CSS Reset  -->
     <link rel="stylesheet" href="css/reset.css">
 
+    <!-- Google Fonts Links -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=El+Messiri&family=Source+Sans+Pro&display=swap"
+        rel="stylesheet">
+
     <!-- Icon Stylesheet -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
@@ -20,25 +27,52 @@
 <body>
     <!-- Use header, main, section, footer, etc. instead of div tag for accessibility purposes. -->
     <header>
-        <img class="logo" src="images/logo.png" alt="Queen of Pastries Shop">
-        <nav class="nav" role="navigation">
-            <ul>
-                <!-- Link all nav items to respective pages -->
-                <li><a href="home.html">Home</a></li>
-                <li><a href="about.html">About Us</a></li>
-                <li><a href="contact.html">Contact Us</a></li>
-            </ul>
-        </nav>
+        <div class="logo-nav">
+            <!-- Two logos: one for mobile devices, one for large size screen. One will be hidden using CSS -->
+            <div class="logo-wrapper-mobile">
+                <img class="logo-mobile" src="images/logo-mobile.png" alt="Queen of Pastries Shop">
+            </div>
+            <div class="logo-wrapper">
+                <img class="logo" src="images/logo.png" alt="Queen of Pastries Shop">
+            </div>
+
+
+            <!-- ----------------------- -->
+            <!-- Create a hamburger menu for mobile devices. 
+                The menu icon is created using three <span> elements within a <label> element. When the user clicks on the label, the checkbox is toggled and the <ul> element containing the menu items is displayed or hidden using the :checked pseudo-class.-->
+            <nav class="nav" role="navigation">
+                <input class="hamburger" type="checkbox" id="menu-toggle">
+                <label class="hamburger" for="menu-toggle">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </label>
+                <ul class="nav-ul">
+                    <!-- Link all nav items to respective pages -->
+                    <li class="nav-li"><a href="home.html">Home</a></li>
+                    <li class="nav-li"><a href="about.html">About Us</a></li>
+                    <li class="nav-li"><a href="contact.html">Contact Us</a></li>
+                </ul>
+            </nav>
+
+        </div>
+
+        <!-- Add skiplinks -->
+        <div class="skip-links-section">
+            <div class="skip-link"><p class="link"><a href="#contact">Contact Us</a></p></div>
+            <div class="skip-link"><p class="link"><a href="#locations">Locations</a></p></div>
+            <div class="skip-link"><p class="link"><a href="#delivery">Delivery</a></p></div>
+        </div>
     </header>
 
     <main role="main">
-        <section class="contact">
+        <section class="contact" id="contact">
             <h1>Contact Us</h1>
-            <!-- Add a hr tag to be styled in CSS, as a divider between section header and tab headers. -->
-            <hr>
+            <!-- Add a span tag to be styled in CSS, as a divider between section header and tab headers. -->
+            <span class="line"></span>
 
-            <!-- Wrap the contact info in a div tag to be styled using flexbox in CSS -->
-            <div class="contact-flex-wrapper contact-info" itemscope itemtype="https://schema.org/Organization">
+            <!-- Wrap the contact info in a div tag to be styled using grid in CSS -->
+            <div class="contact-wrapper contact-info" itemscope itemtype="https://schema.org/Organization">
             <!-- Using Schema for accessibility purposes. -->
 
                 <div class="phone">
@@ -64,9 +98,9 @@
             </div>
         </section>
 
-        <section class="locations">
+        <section class="locations" id="locations">
             <h1>Locations</h1>
-            <hr>
+            <span class="line"></span>
 
             <!-- Wrap the location info in a div tag to be styled using flexbox in CSS -->
             <div class="contact-flex-wrapper location-info">
@@ -90,9 +124,9 @@
             </div>
         </section>
 
-        <section class="delivery">
+        <section class="delivery" id="delivery">
             <h1>Delivery</h1>
-            <hr>
+            <span class="line"></span>
 
             <!-- Wrap the delivery info in a div tag to be styled using flexbox in CSS -->
             <div class="contact-flex-wrapper delivery-info">
@@ -118,7 +152,7 @@
         <div class="footer-menu">
             <div class="footer-first-section">
                 <ul>
-                    <li class="footer-menu-header">Home</li>
+                    <li class="footer-menu-header"><a href="home.html">Home</a></li>
                     <li>Menu</li>
                     <li>Art of Coffee</li>
                     <li>Our Coffee Beans</li>
@@ -127,7 +161,7 @@
 
             <div class="footer-second-section">
                 <ul>
-                    <li class="footer-menu-header">About Us</li>
+                    <li class="footer-menu-header"><a href="about.html">About Us</a></li>
                     <li>Our Story</li>
                     <li>Our Mission</li>
                     <li>Our Vision</li>
