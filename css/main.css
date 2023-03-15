@@ -439,6 +439,10 @@ p 22px*/
         grid-template-columns: repeat(3, 1fr);
     }
 
+    .nav-ul {
+        top: 400px;
+    }
+
 
 
 
