@@ -51,14 +51,14 @@
                     <!-- Link all nav items to respective pages -->
                     <li class="nav-li"><a href="home.html">Home</a></li>
                     <li class="nav-li"><a href="about.html">About Us</a></li>
-                    <li class="nav-li"><a href="contact.html">Contact Us</a></li>
+                    <li class="nav-li"><a id="current-page" href="contact.html">Contact Us</a></li>
                 </ul>
             </nav>
 
         </div>
 
         <!-- Add skiplinks -->
-        <div class="skip-links-section">
+        <div class="skip-links-section skip-links-contact">
             <div class="skip-link"><p class="link"><a href="#contact">Contact Us</a></p></div>
             <div class="skip-link"><p class="link"><a href="#locations">Locations</a></p></div>
             <div class="skip-link"><p class="link"><a href="#delivery">Delivery</a></p></div>
@@ -72,26 +72,26 @@
             <span class="line"></span>
 
             <!-- Wrap the contact info in a div tag to be styled using grid in CSS -->
-            <div class="contact-wrapper contact-info" itemscope itemtype="https://schema.org/Organization">
+            <div class="contact-wrapper" itemscope itemtype="https://schema.org/Organization">
             <!-- Using Schema for accessibility purposes. -->
 
-                <div class="phone">
+                <div class="contact-info phone">
                     <!-- Use span tag to wrap the icons, so we can style them and add margin in CSS -->
                     <span class="contact-icon"><i class="fa fa-phone"></i></span>
                     <p class="contact-text" itemprop="telephone">123-456-7890</p>
                 </div>
 
-                <div class="email">
+                <div class="contact-info email">
                     <span class="contact-icon"><i class="fa fa-envelope"></i></span>
                     <p class="contact-text" itemprop="email">queenofpastries@gmail.com</p>
                 </div>
 
-                <div class="insta">
+                <div class="contact-info insta">
                     <span class="contact-icon"><i class="fa fa-instagram"></i></span>
                     <p class="contact-text link"><a href="https://www.instagram.com/" target="_blank">@queen_of_pastries</a></p>
                 </div>
 
-                <div class="facebook">
+                <div class="contact-info facebook">
                     <span class="contact-icon"><i class="fa fa-facebook-square"></i></span>
                     <p class="contact-text link"><a href="https://www.instagram.com/" target="_blank">Queen of Pastries</a></p>
                 </div>
@@ -104,21 +104,21 @@
 
             <!-- Wrap the location info in a div tag to be styled using flexbox in CSS -->
             <div class="contact-flex-wrapper location-info">
-                <div>
+                <div class="address">
                     <p itemprop="address" itemscope itemtype="https://schema.org/PostalAddress">
-                        <span itemprop="streetAddress">123 Bank St. </span>
+                        <span itemprop="streetAddress" class="location-line-height">123 Fake St. </span>
+                        <br>
                         <span itemprop="addressLocality">Ottawa ON </span>
-                        <span itemprop="addressCountry">CAN </span>
-                        <span itemprop="postalCode">B3T 0L0</span>
+                        <span itemprop="postalCode">B3T 1L2</span>
                       </p>
                 </div>
 
                 <div>
                     <p itemprop="address" itemscope itemtype="https://schema.org/PostalAddress">
-                        <span itemprop="streetAddress">123 Laurier Ave E. </span>
+                        <span itemprop="streetAddress">123 Fake Ave E. </span>
+                        <br>
                         <span itemprop="addressLocality">Ottawa ON </span>
-                        <span itemprop="addressCountry">CAN </span>
-                        <span itemprop="postalCode">D3T 0L0</span>
+                        <span itemprop="postalCode">D3T 1L2</span>
                       </p>
                 </div>
             </div>
@@ -168,11 +168,11 @@
                 </ul>
             </div>
 
-            <div class="ig-icon">
+            <div class="social-icons ig-icon">
                 <a href="https://www.instagram.com/" target="_blank"><i class="fa fa-instagram"></i></a>
             </div>
 
-            <div class="fb-icon">
+            <div class="social-icons fb-icon">
                 <a href="https://www.facebook.com/" target="_blank"><i class="fa fa-facebook-square"></i></a>
             </div>
         </div>

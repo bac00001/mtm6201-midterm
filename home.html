@@ -21,14 +21,15 @@
 
     <!-- Custom Stylesheet  -->
     <link rel="stylesheet" href="css/main.css">
+
     <title>Queen of Pastries - Home</title>
 </head>
 
 <body>
     <!-- Use header, main, section, footer, etc. instead of div tag for accessibility purposes. -->
-    <header>
+    <header role="navigation">
 
-        <div class="logo-nav">
+        <div class="container logo-nav">
 
             <!-- Two logos: one for mobile devices, one for large size screen. One will be hidden using CSS -->
             <div class="logo-wrapper-mobile">
@@ -38,9 +39,11 @@
                 <img class="logo" src="images/logo.png" alt="Queen of Pastries Shop">
             </div>
 
-            <!-- ----------------------- -->
+         
             <!-- Create a hamburger menu for mobile devices. 
              The menu icon is created using three <span> elements within a <label> element. When the user clicks on the label, the checkbox is toggled and the <ul> element containing the menu items is displayed or hidden using the :checked pseudo-class.-->
+            
+            
             <nav class="nav" role="navigation">
                 <input class="hamburger" type="checkbox" id="menu-toggle">
                 <label class="hamburger" for="menu-toggle">
@@ -50,13 +53,14 @@
                 </label>
                 <ul class="nav-ul">
                     <!-- Link all nav items to respective pages -->
-                    <li class="nav-li"><a href="home.html">Home</a></li>
+                    <li class="nav-li"><a id="current-page" href="home.html">Home</a></li>
                     <li class="nav-li"><a href="about.html">About Us</a></li>
                     <li class="nav-li"><a href="contact.html">Contact Us</a></li>
                 </ul>
             </nav>
-
         </div>
+
+
         <div class="banner" role="banner">
             <img class="banner-img" src="images/cupcake-banner.jpg"
                 alt="Our special blueberry cupcakes garnished with fresh blueberries, strawberries, and mint.">
@@ -89,7 +93,7 @@
                 <div class="menu-label"><p class="purple">Drinks</p></div>
             </div>
 
-            <!-- Wrap all menu item boxed in one wrapper to be styled in CSS using grid -->
+            <!-- Wrap all menu item boxes in one wrapper to be styled in CSS using grid -->
             <div class="menu-wrapper">
                 <div class="menu-item one">
                     <img src="images/menu-item-one.jpg"
@@ -99,7 +103,7 @@
                         <!-- Use HTML code for the dollar sign instead of $ to ensure proper display on all brownsers. -->
                         <div class="item-price"><p class="menu-text">&#36;5.95</p></div>
                     </div>
-                    <button type="button"><p class="menu-text">View</p></button>
+                    <button type="button" class="menu-text">View</button>
                 </div>
 
                 <div class="menu-item two">
@@ -108,7 +112,7 @@
                         <div class="item-name"><p class="menu-text">Strawberry Cream Cake</p></div>
                         <div class="item-price"><p class="menu-text">&#36;5.95</p></div>
                     </div>
-                    <button type="button"><p class="menu-text">View</p></button>
+                    <button type="button" class="menu-text">View</button>
                 </div>
 
                 <div class="menu-item three">
@@ -118,7 +122,7 @@
                         <div class="item-name"><p class="menu-text">Apple Cheesecake</p></div>
                         <div class="item-price"><p class="menu-text">&#36;4.95</p></div>
                     </div>
-                    <button type="button"><p class="menu-text">View</p></button>
+                    <button type="button" class="menu-text">View</button>
                 </div>
 
                 <div class="menu-item four">
@@ -128,7 +132,7 @@
                         <div class="item-name"><p class="menu-text">Pistachio-Strawberry Tartlet</p></div>
                         <div class="item-price"><p class="menu-text">&#36;5.25</p></div>
                     </div>
-                    <button type="button"><p class="menu-text">View</p></button>
+                    <button type="button" class="menu-text">View</button>
                 </div>
 
                 <div class="menu-item five">
@@ -138,7 +142,7 @@
                         <div class="item-name"><p class="menu-text">Oreo Cheesecake</p></div>
                         <div class="item-price"><p class="menu-text">&#36;7.25</p></div>
                     </div>
-                    <button type="button"><p class="menu-text">View</p></button>
+                    <button type="button" class="menu-text">View</button>
                 </div>
 
                 <div class="menu-item six">
@@ -148,13 +152,13 @@
                         <div class="item-name"><p class="menu-text">Coffee Cake</p></div>
                         <div class="item-price"><p class="menu-text">&#36;7.25</p></div>
                     </div>
-                    <button type="button"><p class="menu-text">View</p></button>
+                    <button type="button" class="menu-text">View</button>
                 </div>
             </div>
             
 
             <div class="main-menu-button-wrapper">
-                <button class="main-menu-button" type="button"><p>View All</p></button>
+                <button class="main-menu-button menu-text" type="button">View All</button>
             </div>
 
         </section>
@@ -163,28 +167,30 @@
             <h1>Art of Coffee</h1>
             <span class="line"></span>
 
-            <div class="latte-art-img-wrapper">
-                <span class="arrow left">&#9666;</span>
-                <div class="latte-art-img img-one"><img src="images/art-of-coffee-one.jpg" alt=""></div>
-                <div class="latte-art-img img-two"><img src="images/art-of-coffee-two.png"
-                    alt="Our foamy latte with beautiful latte art: smells good, looks good, tastes good. Marvelous!"></div>
-                <div class="latte-art-img img-three"><img src="images/art-of-coffee-three.jpg" alt=""></div>
-                <span class="arrow right">&#9656;</span>
-            </div>
+            <div class="art-of-coffee-flex">
+                <!-- <div class="latte-art-img-wrapper"> -->
+                    <!-- <span class="arrow left">&#9666;</span> -->
+                    <!-- <div class="latte-art-img img-one"><img src="images/art-of-coffee-one.jpg" alt=""></div> -->
+                    <div class="latte-art-img img-two"><img src="images/art-of-coffee-two.png"
+                        alt="Our foamy latte with beautiful latte art: smells good, looks good, tastes good. Marvelous!"></div>
+                    <!-- <div class="latte-art-img img-three"><img src="images/art-of-coffee-three.jpg" alt=""></div> -->
+                    <!-- <span class="arrow right">&#9656;</span> -->
+                <!-- </div> -->
 
-            <div class="lorem">
-                <p>Lorem ipsum dolor sit amet, consectetur
-                    adipiscing elit. Ut sit amet ipsum non
-                    ipsum accumsan viverra. Suspendisse a
-                    accumsan nulla. Nunc nunc nibh, ullam
-                    corper nec nisl eu, auctor fringilla lectus.
-
-                    Sed luctus libero et justo ultrices ornare. Ut
-                    auctor enim sit amet eros porta porta. Viva
-                    mus consequat nisi nec magna sollicitudin
-                    blandit.Vivamus vel mauris dui. Phasellus
-                    condimentum vulputate magna id tincidu.
-                    Quisque non orci iaculis.</p>
+                <div class="lorem">
+                    <p>Lorem ipsum dolor sit amet, consectetur
+                        adipiscing elit. Ut sit amet ipsum non
+                        ipsum accumsan viverra. Suspendisse a
+                        accumsan nulla. Nunc nunc nibh, ullam
+                        corper nec nisl eu, auctor fringilla lectus.</p>
+                        
+                    <p>Sed luctus libero et justo ultrices ornare. Ut
+                        auctor enim sit amet eros porta porta. Viva
+                        mus consequat nisi nec magna sollicitudin
+                        blandit.Vivamus vel mauris dui. Phasellus
+                        condimentum vulputate magna id tincidu.
+                        Quisque non orci iaculis.</p>
+                </div>
             </div>
         </section>
 
@@ -196,30 +202,30 @@
                 <span class="arrow left">&#9666;</span>
 
                 <div class="menu-item beans-one">
-                    <img src="images/coffee-package.jpg" alt="Our specialty light-roasted coffee beans.">
+                    <img src="images/coffee-package.jpg" alt="Our specialty Arabica coffee beans.">
                     <div class="name-price-wrapper">
-                        <div class="item-name"><p class="menu-text">Light-roasted Coffee Beans</p></div>
-                    <div class="item-price"><p class="menu-text">&#36;11.25</p></div>
+                        <div class="item-name"><p class="menu-text">Arabica Coffee Beans</p></div>
+                    <div class="item-price"><p class="menu-text">&#36;15.25</p></div>
                     </div>
-                    <button type="button"><p class="menu-text">View</p></button>
+                    <button type="button" class="menu-text">View</button>
                 </div>
 
                 <div class="menu-item beans-two">
-                    <img src="images/coffee-package.jpg" alt="Our specialty medium-roasted coffee beans.">
+                    <img src="images/coffee-package.jpg" alt="Our specialty Liberica coffee beans.">
                     <div class="name-price-wrapper">
-                        <div class="item-name"><p class="menu-text">Medium-roasted Coffee Beans</p></div>
-                    <div class="item-price"><p class="menu-text">&#36;11.25</p></div>
+                        <div class="item-name"><p class="menu-text">Liberica Coffee Beans</p></div>
+                        <div class="item-price"><p class="menu-text">&#36;19.75</p></div>
                     </div>
-                    <button type="button"><p class="menu-text">View</p></button>
+                    <button type="button" class="menu-text">View</button>
                 </div>
 
                 <div class="menu-item beans-three">
-                    <img src="images/coffee-package.jpg" alt="Our specialty roasted coffee beans.">
+                    <img src="images/coffee-package.jpg" alt="Our specialty Robusta coffee beans.">
                     <div class="name-price-wrapper">
-                        <div class="item-name"><p class="menu-text">Roasted Coffee Beans</p></div>
-                    <div class="item-price"><p class="menu-text">&#36;11.25</p></div>
+                        <div class="item-name"><p class="menu-text">Robusta Coffee Beans</p></div>
+                    <div class="item-price"><p class="menu-text">&#36;11.75</p></div>
                     </div>
-                    <button type="button"><p class="menu-text"></p>View</button>
+                    <button type="button" class="menu-text">View</button>
                 </div>
 
                 <span class="arrow right">&#9656;</span>
@@ -249,11 +255,11 @@
                 </ul>
             </div>
 
-            <div class="ig-icon">
+            <div class="social-icons ig-icon">
                 <a href="https://www.instagram.com/" target="_blank"><i class="fa fa-instagram"></i></a>
             </div>
 
-            <div class="fb-icon">
+            <div class="social-icons fb-icon">
                 <a href="https://www.facebook.com/" target="_blank"><i class="fa fa-facebook-square"></i></a>
             </div>
         </div>
@@ -262,10 +268,9 @@
             <i class="fa fa-copyright"></i>
             Queen of Pastries 2022
         </p>
-        <p class="copyright">All images are taken from <a href="https://www.freepik.com/">Freepik</a></p>
+        <p class="copyright">All images are taken from <a href="https://www.freepik.com/" target="_blank">Freepik</a></p>
 
     </footer>
-
 </body>
 
 </html>
